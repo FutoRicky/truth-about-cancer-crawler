@@ -3,7 +3,7 @@ var Nightmare = require('nightmare');
 var faker = require('faker');
 
 var registerReferral = function(url, refAmount) {
-  var nightmare = new Nightmare({show: true});
+  var nightmare = new Nightmare({show: false});
   nightmare
   .goto(url)
   .type('input[name="first_name"]', faker.name.firstName())
