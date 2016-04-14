@@ -1,3 +1,6 @@
+var prompt = require('prompt');
+var Nightmare = require('nightmare');
+
 var randString = function()
 {
     var text = "";
@@ -30,8 +33,6 @@ var registerReferral = function(url, refAmount) {
 };
 
 var processCount = 0;
-var prompt = require('prompt');
-var Nightmare = require('nightmare');
 
 prompt.start();
 prompt.get([{
