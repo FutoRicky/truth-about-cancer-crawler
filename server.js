@@ -1,24 +1,13 @@
 var prompt = require('prompt');
 var Nightmare = require('nightmare');
-
-var randString = function()
-{
-    var text = "";
-    var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
-
-    for( var i=0; i < 5; i++ )
-        text += possible.charAt(Math.floor(Math.random() * possible.length));
-
-    return text;
-};
-
+var faker = require('faker');
 
 var registerReferral = function(url, refAmount) {
-  var nightmare = new Nightmare({show: false});
+  var nightmare = new Nightmare({show: true});
   nightmare
   .goto(url)
-  .type('input[name="first_name"]', randString())
-  .type('input[name="email"]', randString() + '@hotmail.com')
+  .type('input[name="first_name"]', faker.name.firstName())
+  .type('input[name="email"]', faker.internet.email())
   .click('.pform .btn-container button')
   .end()
   .then(function() {
