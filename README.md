@@ -9,7 +9,8 @@ https://go.thetruthaboutcancer.com/?ref=aaa9fa0f-ea9c-44d9-8f10-955948b97fad
 
 - Clone this repository `git clone https://github.com/FutoRicky/truth-about-cancer-crawler.git`
 - cd into the `truth-about-cancer-crawler` directory
-- run `node script.js`
+- run `npm install` to install dependencies
+- run the script `node server.js`
 - input your referral link when prompted
 - input amount of referrals wanted when prompted (defaults to 25)
 - That's it!
